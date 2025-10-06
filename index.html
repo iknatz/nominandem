@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Terminal</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .terminal {
+      border: 2px solid #000;
+      padding: 20px;
+      max-width: 1600px;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .output {
+      white-space: pre-wrap;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .prompt {
+      display: flex;
+      align-items: center;
+    }
+
+    .prompt span {
+      color: #00ff00;
+      margin-right: 5px;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 10px;
+      height: 20px;
+      background-color: #00ff00;
+      margin-left: 5px;
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { background-color: transparent; }
+    }
+
+    a {
+      color: #00ff00;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #00cc00;
+    }s
+
+    /* Pip-Boy style scanlines */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 0, 0.03),
+        rgba(0, 255, 0, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      pointer-events: none;
+    }
+    .terminal {
+      background-color: black;
+      color: green;
+      font-family: monospace;
+      padding: 1px;
+    }
+    .terminal-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      border-spacing: 0cqmin;
+    }
+    th, td {
+        border-style: solid;
+        border-color: red;
+        padding: 4px;
+        color: 00cc00;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header header header header header'
+        'bild bild backstory backstory skull'
+        'text test backstory backstory skull'
+        'staerken staerken schwaechen schwaechen attr'
+        'talente talente talente equip1 equip2';
+      gap: 2px;
+      background-color: #00ff00;
+      padding: 1px;
+      border: 2px solid #00ff00;
+    }
+
+    .grid-container > div {
+      background-color: #000;
+      color: #00ff00;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 1px;
+      text-align: center;
+    }
+
+    .item1 { grid-area: header; }
+    .item2 { grid-area: bild; }
+    .item3 { grid-area: text; }
+    .item4 { grid-area: attr; }
+    .item5 { grid-area: test; }
+    .item6 { grid-area: talente; }
+    .item7 { grid-area: backstory; }
+    .item8 { grid-area: equip1; }
+    .item9 { grid-area: equip2; }
+    .item10 { grid-area: skull; }
+    .item11 { grid-area: schwaechen; }
+    .item12 { grid-area: staerken; }
+
+
+    .item11.td {border-color: #00cc00; }
+
+  </style>
+
+
+
+
+</head>
+<body>
+  <div class="terminal">
+    <div class="output">
+      <div class="terminal-content">
+
+
+          
+
+
+
+<div class="grid-container">
+  <div class="item5" style=
+    "border:1px solid black;
+    font-size: 10px;">
+<h2>Fertigkeiten </h2> 
+<h1>Tradition: Dryadori</h1>                  
+Waffenbeherrschung Stangenwaffe -- Waldschütze & Jagdgefährte -- Heilbeere -- Speerspitze -- Jagdsinn
+<h1>Tradition: Lotrenne</h1>                    
+Waffenbeherrschung Schwarzpulverwaffe -- Taktische Befehle -- Spezialmunition     
+</div>
+
+
+  <div class="item7" style=
+    "border:1px solid black;
+    font-size: 10px;">
+    Als die Arc Mechanicus "Liber Argentum" Krovesk-IV vor einigen Zyklen passierte, waren alle Mitglieder des Adeptus Mechanicus kontaktiert worden. Ihre ergebenheit und die Ergebnisse ihrer Techno-Archäologischen Unetrsuchungen sollten ausschlaggebend für Beförderungen sein, die den Tech-Priestern auf der verlorenen Welt versprochen wurde. Im übertragenene wie auch sehr konkreten Sinne, denn die Adepten des Mars überschlugen sich, den Fahrschein von diesem Planeten zu ergattern.
+
+    Ephraim Epikurius Ketter war ursprünglich der letzte, dem ein Platz auf dem-Exploratoren-Leerenkreuzer zustand, doch ein Rivale, Magos Diego Iubilaous manipulierte die Datenbanken und nahm Ketter alles, was er sich erarbeitet hatte: Seinen Rang, seine Position innerhalb des Adeptus und schließlich seinen Namen.
+
+    An Stelle seines Titels und seines Namens finden sich innerhalb der Noosphäre nur der Platzhalternamen "Nomen Nominandum". Nachdem er aber seine bescheidenen Forschungen zusammengapckt hatte und seinen Glauben an den Maschinengot mittels Meditation gesfetigt hatte, entschied er sich, das dies lediglich eine Prüfung sei und der Omnissiah seine Hand auf seinem Rachefeldzug leiten Würde.
+  </div>
+    <div class="item10">
+      <h2> AMONIA </h2>
+ <img src="C:\Users\maria\Desktop\Bild4.png" width="200">      
+ <table style=
+    "border:1px solid black;
+    font-size: 15px;
+    text-align: inherit;">
+      <tr>
+        <th style="border:1px solid red;font-size: 8px;">(KON)</th>
+        <th style="border:1px solid red;font-size: 8px">(SIN)</th>
+        <th style="border:1px solid red;font-size: 8px">(VER)</th>
+        <th style="border:1px solid red;font-size: 8px">(INT)</th>
+        <th style="border:1px solid red;font-size: 8px">(WIL)</th>
+        <th style="border:1px solid red;font-size: 8px">(AUS)</th>
+      </tr>
+      <tr>
+        <td style="text-align: center; border:1px solid red;">5</td>
+        <td style="text-align: center; border:1px solid red;">4</td>    
+        <td style="text-align: center; border:1px solid red;">1</td>
+        <td style="text-align: center; border:1px solid red;">2</td>
+        <td style="text-align: center; border:1px solid red;">3</td>
+        <td style="text-align: center; border:1px solid red;">1</td>
+      </tr>
+    </table>
+  </div> 
+
+
+
+    <div class="item8">
+ <img src="C:\Users\maria\Desktop\Bild2.png" width="200">      
+  </div>   
+    <div class="item9">
+ <img src="C:\Users\maria\Desktop\Bild3.png" width="200">   
+  </div>   
+
+  <div class="item1" style=
+    "border:1px solid black;
+    font-size: 20px;">
+    Diagnose-Kontemplationssubroutine gestartet....100%
+    Designation: Nomen Nominandum
+  </div>
+  <div class="item2">
+    <img src="https://artwork.40k.gallery/wp-content/uploads/2022/06/Tech-Priest-1.jpg"
+      width="150">
+  </div>     
+  <div class="item3" style=
+    "border:1px solid black;
+    font-size: 10px;">
+Ephraim Epicurius Ketter
+Rang: [Zugriff verweigert]
+Ergebenheitsniveau: 100%
+Sprachen: Binär, Gothic
+
+  </div>
+
+<div class="item4" style=
+    "border:1px solid black;
+    font-size: 10px;">
+ <table style=
+    "border:1px solid black;
+    font-size: 15px;
+    text-align: inherit;">
+        <th style="border:1px solid red;font-size: 30px;"colspan="2">primäre Einsatzparameter:</th>
+
+      <tr>
+        <td style="border:1px solid red;font-size: 12px;">KON</td>
+        <td style="border:1px solid red;font-size: 12px;">4</td>
+      </tr>
+      
+      <tr>
+        <td style="border:1px solid red;font-size: 12px;">SIN</td>
+        <td style="border:1px solid red;font-size: 12px;">5</td>
+      </tr>
+      
+      <tr>
+        <td style="border:1px solid red;font-size: 12px;">VER</td>
+        <td style="border:1px solid red;font-size: 12px;">3</td>
+      </tr>
+      
+      <tr>
+        <td style="border:1px solid red;font-size: 12px;">INT</td>
+        <td style="border:1px solid red;font-size: 12px;">1</td>
+      </tr>
+      
+      <tr>
+        <td style="border:1px solid red;font-size: 12px;">WIL</td>
+        <td style="border:1px solid red;font-size: 12px;">5</td>
+      </tr>
+      
+      <tr>
+        <td style="border:1px solid red;font-size: 12px;">AUS</td>
+        <td style="border:1px solid red;font-size: 12px;">2</td>
+      </tr>
+  
+    </table>
+
+</div>
+
+
+<div class="item11">
+  <table class="einsatz">
+    <thead>
+      <tr>
+        <th colspan="12">Einsatzparameter</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>KON</th><td>4</td>
+        <th>SIN</th><td>6</td>
+        <th>VER</th><td>3</td>
+        <th>INT</th><td>1</td>
+        <th>WIL</th><td>5</td>
+        <th>AUS</th><td>2</td>
+      </tr>
+      <tr>
+        <td>Athletik (KON)</td><td>4</td>
+        <td>Akrobatik (SIN)</td><td>6</td>
+        <td>Ermittlung (VER)</td><td>3</td>
+        <td>Künste (INT)</td><td>1</td>
+        <td>Einschüchtern (WIL)</td><td>5</td>
+        <td>Auftreten & Betören (AUS)</td><td>2</td>
+      </tr>
+      <tr>
+        <td>Handwerk (KON)</td><td>14</td>
+        <td>Fingerfertigkeit (SIN)</td><td>6</td>
+        <td>Heilkunde (VER)</td><td>16</td>
+        <td>Mystik (INT)</td><td>3</td>
+        <td>Motivieren (WIL)</td><td>16</td>
+        <td>Einsicht (AUS)</td><td>2</td>
+      </tr>
+      <tr>
+        <td>Kraftakt (KON)</td><td>4</td>
+        <td>Heimlichkeit (SIN)</td><td>6</td>
+        <td>Geschichte (VER)</td><td>3</td>
+        <td>Religion (INT)</td><td>1</td>
+        <td>Politik & Etikette (WIL)</td><td>5</td>
+        <td>Seelsorge (AUS)</td><td>2</td>
+      </tr>
+      <tr>
+        <td>Tierführung (KON)</td><td>4</td>
+        <td>Wahrnehmung (SIN)</td><td>11</td>
+        <td>Wissenschaft (VER)</td><td>3</td>
+        <td>Überleben & Natur (INT)</td><td>1</td>
+        <td>Überzeugen (WIL)</td><td>5</td>
+        <td>Täuschen (AUS)</td><td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+.einsatz {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* sorgt dafür, dass die Breiten greifen */
+  font-size: 12px;
+  text-align: center;
+}
+
+.einsatz th, .einsatz td {
+  border-right: 2px dashed gray;
+  padding: 6px;
+}
+
+/* Überschrift */
+.einsatz th[colspan] {
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.einsatz th {
+  font-size: 20px;
+}
+
+.einsatz th:nth-child(1) {
+  width: 12%;
+}
+.einsatz th:nth-child(1) {
+  width: 6%;
+}
+
+</style>
+
+<div class="item12" style=
+    "border:1px solid black;
+    font-size: 10px;">
+      <h2> Stärken </h2>
+      Spezialist: Nametaker
+Tiergefährte III: Amonia V02
+Neue Profession:Heiler 
+Traditionsbewusst: Lotrenne
+</div>
+
+
+
+  <div class="item6">
+sekundäre Einsatzparameter:
+  <table style="border:1px solid black;
+    font-size: 10px;">
+    <tr>
+      <td style="text-align: center; border:1px solid red; ">Akrobatik (SIN)</td>
+      <td style="text-align: center; border:1px solid red; ">6</td>
+      <td style="text-align: center; border:1px solid red; ">Ermittlung (VER)</td>
+      <td style="text-align: center; border:1px solid red; ">3</td>
+      <td style="text-align: center; border:1px solid red;">Auftreten & Betören (AUS)</td>
+      <td style="text-align: center; border:1px solid red;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;">Athletik (KON)</td>
+      <td style="text-align: center; border:1px solid red;">4</td>
+      <td style="text-align: center; border:1px solid red;">Heilkunde (VER)</td>
+      <td style="text-align: center; border:1px solid red;">14</td>
+      <td style="text-align: center; border:1px solid red;">Einschüchtern (WIL)</td>
+      <td style="text-align: center; border:1px solid red;">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;;">Fingerfertigkeit (SIN)</td>
+      <td style="text-align: center; border:1px solid red;">6</td>
+      <td style="text-align: center; border:1px solid red;">Künste (INT)</td>
+      <td style="text-align: center; border:1px solid red;">1</td>
+      <td style="text-align: center; border:1px solid red;">Einsicht (AUS)</td>
+      <td style="text-align: center; border:1px solid red;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;">Handwerk (KON)</td>
+      <td style="text-align: center; border:1px solid red;">14</td>
+      <td style="text-align: center; border:1px solid red;">Mystik (INT)</td>
+      <td style="text-align: center; border:1px solid red;">3</td>
+      <td style="text-align: center; border:1px solid red;">Motivieren (WIL)</td>
+      <td style="text-align: center; border:1px solid red;">16</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;">Heimlichkeit (SIN)</td>
+      <td style="text-align: center; border:1px solid red;">6</td>
+      <td style="text-align: center; border:1px solid red;">Geschichte (VER)</td>
+      <td style="text-align: center; border:1px solid red;">3</td>
+      <td style="text-align: center; border:1px solid red;">Seelsorge (AUS)</td>
+      <td style="text-align: center; border:1px solid red;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;">Kraftakt (KON)</td>
+      <td style="text-align: center; border:1px solid red;">4</td>
+      <td style="text-align: center; border:1px solid red;">Religion (INT)</td>
+      <td style="text-align: center; border:1px solid red;">1</td>
+      <td style="text-align: center; border:1px solid red;">Täuschen (AUS)</td>
+      <td style="text-align: center; border:1px solid red;">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;">Tierführung (KON)</td>
+      <td style="text-align: center; border:1px solid red;">4</td>
+      <td style="text-align: center; border:1px solid red;">Überleben & Natur (INT)</td>
+      <td style="text-align: center; border:1px solid red;">1</td>
+      <td style="text-align: center; border:1px solid red;">Politik & Etikette (WIL)</td>
+      <td style="text-align: center; border:1px solid red;">5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; border:1px solid red;">Wahrnehmung (SIN)</td>
+      <td style="text-align: center; border:1px solid red;">11</td>
+      <td style="text-align: center; border:1px solid red;">Wissenschaft (VER)</td>
+      <td style="text-align: center; border:1px solid red;">3</td>
+      <td style="text-align: center; border:1px solid red;">Überzeugen (WIL)</td>
+      <td style="text-align: center; border:1px solid red;">5</td>
+    </tr>
+  </table>
+  </div> 
+
+  </div> 
+</div>
+</div>
+</div>
+
+
+  </div>
+</body>
+</html>
